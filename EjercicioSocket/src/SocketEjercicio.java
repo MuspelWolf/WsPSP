@@ -51,10 +51,32 @@ public class SocketEjercicio {
 				String[] operadores = stringRecibido.split("-");
 				int iNumero1 = Integer.parseInt(operadores[0]);//3
 				int iNumero2 = Integer.parseInt(operadores[1]);//4
-				int resultado = iNumero1 + iNumero2;//7 
+				int oper = Integer.parseInt(operadores[2]);
+				int operandos = 0;
+				
+				switch (oper) {
+				case 1:
+					operandos = iNumero1 + iNumero2;
+					salida.println(operandos);
+					
+				case 2:
+					operandos = iNumero1 - iNumero2;
+					salida.println(operandos);
+					
+				case 3:
+					operandos = iNumero1 * iNumero2;
+					salida.println(operandos);
+					
+				case 4:
+					operandos = iNumero1 / iNumero2;
+					salida.println(operandos);
+					
+				default:
+					salida.println(operandos);
+				}
 				//Thread.sleep(10000);//simulamos que tardamos un tiempo en calcular
 				salida = new PrintStream(socketConexion.getOutputStream());
-				salida.println(resultado);
+				salida.println(operandos);
 				
 			}
 		} catch (IOException excepcion) {

@@ -38,34 +38,16 @@ public class SocketEjercicioRepetitivo {
 					salida = new PrintStream(socketCliente.getOutputStream());
 					// ser� lo que nos devuelva el servidor
 
-					System.out.println("Introduzca los numeros con los que se va a operar: ");
+					System.out.println("Introduzca el primer numero:");
 					String numero1 = sc.nextLine();
+					System.out.println("Introduzca el segundo numero:");
 					String numero2 = sc.nextLine();
 					
-					System.out.println("Introduce el operando(1.Sumar 2.Operar 3.Multiplicar 4.Dividir: ): ");
+					System.out.println("Introduce el operando(1.Sumar 2.Operar 3.Multiplicar 4.Dividir):");
 					String oper = sc.nextLine();
 					
-					String operandos = "Debes introducir una opcion disponible";
-					switch (oper) {
-					case "1":
-						operandos = numero1 + "+" + numero2;
-						salida.println(operandos);
-						
-					case "2":
-						operandos = numero1 + "-" + numero2;
-						salida.println(operandos);
-						
-					case "3":
-						operandos = numero1 + "*" + numero2;
-						salida.println(operandos);
-						
-					case "4":
-						operandos = numero1 + "/" + numero2;
-						salida.println(operandos);
-						
-					default:
-						salida.println(operandos);
-					}
+					String operandos = numero1 + "-" + numero2 + "-" + oper;
+					salida.println(operandos);
 				
 
 					BufferedReader bf = new BufferedReader(entrada);
