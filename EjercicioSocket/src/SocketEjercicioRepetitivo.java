@@ -53,7 +53,7 @@ public class SocketEjercicioRepetitivo {
 					BufferedReader bf = new BufferedReader(entrada);
 					// Esperamos aqui a que responda el servidor
 					String linea_recibida = bf.readLine();
-					System.out.println("CLIENTE: El servidor me ha respondido: " + linea_recibida);
+					System.out.println("Resultado de la operacion: " + linea_recibida);
 					System.out.println("Quiere continuar? S/N");
 					String sContinuar = sc.nextLine();
 					if (sContinuar.equalsIgnoreCase("n")) {

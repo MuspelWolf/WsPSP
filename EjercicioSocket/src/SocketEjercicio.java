@@ -47,33 +47,26 @@ public class SocketEjercicio {
 				String stringRecibido = bf.readLine();//"3-4"
 				//MUY IMPORTANTE, la informacion siempre llega en formato STRING
 				//TODO LO QUE LLEGA DEL CLIENTE Y LO QUE LE MANDE AL SERVIDOR SON STRING
+				
 				System.out.println("SERVIDOR: Me ha llegado del cliente: " + stringRecibido);
 				String[] operadores = stringRecibido.split("-");
+				
 				int iNumero1 = Integer.parseInt(operadores[0]);//3
 				int iNumero2 = Integer.parseInt(operadores[1]);//4
 				int oper = Integer.parseInt(operadores[2]);
 				int operandos = 0;
 				
-				switch (oper) {
-				case 1:
+				if(oper == 1)
 					operandos = iNumero1 + iNumero2;
-					salida.println(operandos);
-					
-				case 2:
+				else if(oper == 2)
 					operandos = iNumero1 - iNumero2;
-					salida.println(operandos);
-					
-				case 3:
+				else if(oper == 3)
 					operandos = iNumero1 * iNumero2;
-					salida.println(operandos);
-					
-				case 4:
+				else if(oper == 4)
 					operandos = iNumero1 / iNumero2;
-					salida.println(operandos);
-					
-				default:
-					salida.println(operandos);
-				}
+				else
+					oper = -1;
+				
 				//Thread.sleep(10000);//simulamos que tardamos un tiempo en calcular
 				salida = new PrintStream(socketConexion.getOutputStream());
 				salida.println(operandos);
