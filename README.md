@@ -1,3 +1,2 @@
 # WsPSP
 
-Falta Ejercicio Cripto
