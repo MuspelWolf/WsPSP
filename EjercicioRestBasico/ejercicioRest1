@@ -1,0 +1,14 @@
+1) Instalar POSTMAN en nuestros equipos
+
+2) Vamos a hacer un servicio rest con spring boot que suministre los siguientes
+recursos
+	a) Perdir que nos mande un videojuego, el videojuego tendra
+	los siguientes campos. ID, nombre, compañia y precio. Cada alumno 
+	podra el videojuego que quiera (1-Sonic-sega-30).
+	Podemos hacer el recurso "videojuego" con el verbo GET
+	
+	b) Modificar el precio del videojuego cuando mandemos un verbo put
+	al recurso de "videojuego", por ejempolo ponerle 10€ más que su precio
+	de salida
+	
+3) Recordar subir los ejercicios a vuestro reposotio GIT
